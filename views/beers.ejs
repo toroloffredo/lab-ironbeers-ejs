@@ -1,5 +1,9 @@
-<h1>All Beers</h1>
-<h2>Beers Page</h2>
+<div class="all-beers">
+<% beersFromApi.forEach((beer) => { %>
+    <div id="beer-<%- beer.id %>" class="beer-from-beers">
+<%- include('partials/beer.ejs', {beer}) %>
+</div>
 
-<%- include('./partials/beer.ejs') %>
+<% }) %>
+</div>
 

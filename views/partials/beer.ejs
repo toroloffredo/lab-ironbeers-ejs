@@ -1,16 +1,11 @@
-
-<% beersFromApi.forEach((beer) => { %>
-<div>
-  <h3>Name:</h3>
-  <p><%- beer.name %></p>
-
-  <h3>Tagline:</h3>
-  <p><%- beer.tagline %></p>
-
-  <h3>Description:</h3>
-  <p><%- beer.description %></p>
-
-  <img src=<%- beer.image_url %>>
+<div class="beer-img-div">
+  <img src="<%- beer.image_url %>" class="beer-img" />
 </div>
 
-<% }) %>
+<div class="beer-main-info">
+  <p class="beer-name">
+    <a href="beers/beer-<%- beer.id %>"><%- beer.name %></a>
+  </p>
+  <p class="beer-tagline"><%- beer.tagline %></p>
+  <p class="beer-description"><%- beer.description %></p>
+</div>

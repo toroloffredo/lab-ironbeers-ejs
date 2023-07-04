@@ -1,14 +1,16 @@
-<h1>All Beers</h1>
-<h2>Beers Page</h2>
-
-
-<% beersFromApi.forEach((beer) => { %>
-<div>
-  <%- include('./partials/beer.ejs') %>
-  <h3>Food Pairing:</h3>
-  <p><%- beer.food_pairing %></p>
-  <h3>Brewers Tips:</h3>
-  <p><%- beer.brewers_tips %></p>
+<% beer.forEach((beer) => { %>
+<div class="random-beer">
+  <%- include('./partials/beer.ejs', {beer : beer}) %>
+  
+  <div class="additionnal-info">
+    <p class="additionnal-info-title">Food Pairing:</p>
+      <ul>
+        <% beer.food_pairing.forEach((food)=>{%>
+          <li class="food"><%- food %></li>
+        <% }) %>
+      </ul>
+    <p> <span class="additionnal-info-title">Brewers Tips: </span><%- beer.brewers_tips %></p>
+  </div>
 
 </div>
 <% }) %>
