@@ -31,17 +31,19 @@ body {
 }
 
 #nav-list {
+  position: fixed;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  width: 100vw;
   height: 50px;
-  margin-bottom: 30px;
   background-color: #2081c3;
   box-shadow: -3px 4px 10px #bfbfbf;
 }
 
 /*BODY CONTENT*/
 #main-body {
+  padding-top: 60px;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -76,7 +78,7 @@ body {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  margin:50px;
+  padding: 100px;
 }
 
 .beer-from-beers {
@@ -91,6 +93,7 @@ body {
 
 /*SETTING THRE GRID*/
 .random-beer {
+  padding-top: 90px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -112,6 +115,7 @@ body {
 .beer-img {
   width: 100px;
 }
+
 .beer-name a {
   text-decoration: none;
   color: black;
